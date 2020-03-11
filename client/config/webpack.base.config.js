@@ -1,6 +1,10 @@
+const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const APP_DIR = path.resolve(__dirname, '../src');
+
 module.exports = {
+  entry: ['@babel/polyfill', APP_DIR],
   module: {
     rules: [
       {
